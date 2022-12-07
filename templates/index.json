@@ -29,10 +29,20 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "3ad2dd8e-9a35-4721-88bc-d7245248f45d": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div class=\"header-top\">\n\n      <div class=\"container\">\n\n        <ul class=\"header-social-container\">\n\n          <li>\n            <a href=\"#\" class=\"social-link\">\n              <ion-icon name=\"logo-facebook\"><\/ion-icon>\n            <\/a>\n          <\/li>\n\n          <li>\n            <a href=\"#\" class=\"social-link\">\n              <ion-icon name=\"logo-twitter\"><\/ion-icon>\n            <\/a>\n          <\/li>\n\n          <li>\n            <a href=\"#\" class=\"social-link\">\n              <ion-icon name=\"logo-instagram\"><\/ion-icon>\n            <\/a>\n          <\/li>\n\n          <li>\n            <a href=\"#\" class=\"social-link\">\n              <ion-icon name=\"logo-linkedin\"><\/ion-icon>\n            <\/a>\n          <\/li>\n\n        <\/ul>\n\n        <div class=\"header-alert-news\">\n          <p>\n            <b>Free Shipping<\/b>\n            This Week Order Over - $55\n          <\/p>\n        <\/div>\n\n        <div class=\"header-top-actions\">\n\n          <select name=\"currency\">\n\n            <option value=\"usd\">USD &dollar;<\/option>\n            <option value=\"eur\">EUR &euro;<\/option>\n\n          <\/select>\n\n          <select name=\"language\">\n\n            <option value=\"en-US\">English<\/option>\n            <option value=\"es-ES\">Espa&ntilde;ol<\/option>\n            <option value=\"fr\">Fran&ccedil;ais<\/option>\n\n          <\/select>\n\n        <\/div>\n\n      <\/div>\n\n    <\/div>",
+        "color_scheme": "background-1",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
     "video",
-    "d8307ae6-4477-4383-b020-120171a4bb6f"
+    "d8307ae6-4477-4383-b020-120171a4bb6f",
+    "3ad2dd8e-9a35-4721-88bc-d7245248f45d"
   ]
 }
