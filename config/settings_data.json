@@ -129,7 +129,7 @@
         "settings": {
           "color_scheme": "background-1",
           "logo_width": 90,
-          "logo_position": "middle-left",
+          "logo_position": "top-center",
           "menu": "main-menu",
           "menu_type_desktop": "dropdown",
           "show_line_separator": true,
