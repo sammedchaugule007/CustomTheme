@@ -1,5 +1,18 @@
 {
   "sections": {
+    "video": {
+      "type": "video",
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+        "description": "",
+        "full_width": false,
+        "color_scheme": "background-1",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "d8307ae6-4477-4383-b020-120171a4bb6f": {
       "type": "featured-blog",
       "settings": {
@@ -19,6 +32,7 @@
     }
   },
   "order": [
+    "video",
     "d8307ae6-4477-4383-b020-120171a4bb6f"
   ]
 }
