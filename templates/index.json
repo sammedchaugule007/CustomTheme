@@ -8,6 +8,7 @@
     "dc37e799-5255-4d52-bd22-63cc440aa89b": {
       "type": "CustomBanner",
       "settings": {
+        "customBanner": "20"
       }
     },
     "video": {
