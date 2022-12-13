@@ -1,0 +1,24 @@
+{{section.settings.blog-count}}
+
+{% schema  %}
+  {
+    "name": "customBlog",
+    "settings": [
+      {
+        "id": "blog-count",
+        "type": "range",
+        "label": "No. of blogs to display",
+        "min": 3,
+        "max": 12,
+        "step": 3,
+        "default": 3
+      }
+    ],
+    "presets": [
+      {
+        "name": "customBlog",
+        "category": "Custom Category"
+      }
+    ]
+  }
+{% endschema %}}}}}
