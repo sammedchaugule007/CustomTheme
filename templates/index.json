@@ -34,7 +34,8 @@
     "9f31bc4a-94b9-4c33-a6c6-3976f64297d2": {
       "type": "custom-blog",
       "settings": {
-        "blog-count": 3
+        "blog-count": 3,
+        "blog": "news"
       }
     },
     "d8307ae6-4477-4383-b020-120171a4bb6f": {
