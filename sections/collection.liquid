@@ -14,8 +14,7 @@
                         
                         <div class="card__media">
                             <div class="media media--transparent media--hover-effect">
-                                {%- comment -%} {{item.images | first | img_tag}} {%- endcomment -%}
-                                <img src={{item.images | first }} sizes="(min-width: 1200px) 267px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)" alt="Trench Coat" class="motion-reduce" loading="lazy" width="800" height="700">
+                                {{item.images | first | img_tag}}
                             </div>
                             <div class="card__content">
                                 <div class="card__badge bottom left">
