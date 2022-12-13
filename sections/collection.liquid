@@ -29,6 +29,7 @@
                             <h3 class="card__heading h5">
                                 <a href="/products/{{item.title |  replace: ' ', '-'}}"  class="full-unstyled-link">
                                     {{item.title}}
+                                    {{item.images | first | img_tag}}
                                 </a>
                             </h3>
                             <div class="card-information">
