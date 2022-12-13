@@ -1,5 +1,9 @@
 {% assign blog = section.settings.custom-blog %}
-{% unless blog.articles_count==0 %}{% endunless %}
+{% unless blog.articles_count==0 %}
+  {% for article  in blog.articles limit: section.settings.blog-range %}
+    {article.title}
+  {% endfor %}
+{% endunless %}
 {% schema  %}
   {
     "name": "customBlog",
