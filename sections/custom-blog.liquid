@@ -4,10 +4,11 @@
     <a href="{{article.url}}">
       {{article.image.src | img_url: "500x" | img_tag}}
     </a>
+    <br>
     <a href="{{article.url}}">
       {{article.title}}
     </a>
-
+    <br>
   {% endfor %}
 {% endunless %}
 {% schema  %}
