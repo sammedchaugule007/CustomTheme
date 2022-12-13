@@ -22,10 +22,7 @@
       "type": "collection",
       "settings": {
         "product-list": [
-          "denim-jacket",
-          "shirt",
-          "trench-coat",
-          "trench-coat-1"
+
         ]
       }
     },
