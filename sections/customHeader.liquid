@@ -29,11 +29,13 @@
       </li>
 
     </ul>
-
+    
     <div class="header-alert-news">
-      <p>
-        {{section.settings.headerMessage}}
-      </p>
+      {% if section.settings.showMessage == true %}
+        <p>
+          {{section.settings.headerMessage}}
+        </p>
+      {% endif %}
     </div>
 
     <div class="header-top-actions">
