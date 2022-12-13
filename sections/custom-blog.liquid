@@ -1,7 +1,7 @@
 {% assign blog = section.settings.custom-blog %}
 {% unless blog.articles_count==0 %}
   {% for article  in blog.articles limit: section.settings.blog-range %}
-    {{article.image.src | img_url: width:500 | img_tag}}
+    {{article.image.src | img_url: "100*70" | img_tag}}
     {{article.title}}
   {% endfor %}
 {% endunless %}
