@@ -1,6 +1,4 @@
-{% assign blog = section.settings.custom-blog %}
-{{blog.articles_count}}
-
+{% unless blog.articles_count==0 %}{% endunless %}
 {% schema  %}
   {
     "name": "customBlog",
