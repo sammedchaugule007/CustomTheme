@@ -27,8 +27,9 @@
                     <div class="card__content">
                         <div class="card__information">
                             <h3 class="card__heading h5">
-                                <a href="/products/trench-coat-1"  class="full-unstyled-link">
+                                <a href="/products/{{item.title |  replace: ' ', '-'}}"  class="full-unstyled-link">
                                     {{item.title}}
+                                    {{item.title |  replace: ' ', '-'}}
                                 </a>
                             </h3>
                             <div class="card-information">
