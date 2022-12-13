@@ -1,4 +1,4 @@
-{{section.settings.blog-count}}
+{{section.settings.blog-range}}
 {% assign blog = blog[section.settings.custom-blog] %}
 {{blog.articles_count}}
 
@@ -7,7 +7,7 @@
     "name": "customBlog",
     "settings": [
       {
-        "id": "blog-count",
+        "id": "blog-range",
         "type": "range",
         "label": "No. of blogs to display",
         "min": 3,
