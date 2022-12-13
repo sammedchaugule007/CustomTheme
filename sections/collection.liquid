@@ -14,7 +14,7 @@
                         
                         <div class="card__media">
                             <div class="media media--transparent media--hover-effect">
-                                {{item.images | first | img_tag}}
+                                <a href="/products/{{item.title |  replace: ' ', '-'}}">{{item.images | first | img_tag}}</a>
                             </div>
                             <div class="card__content">
                                 <div class="card__badge bottom left">
@@ -29,7 +29,6 @@
                             <h3 class="card__heading h5">
                                 <a href="/products/{{item.title |  replace: ' ', '-'}}"  class="full-unstyled-link">
                                     {{item.title}}
-                                    {{item.images | first | img_tag}}
                                 </a>
                             </h3>
                             <div class="card-information">
