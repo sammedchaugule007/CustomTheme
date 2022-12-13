@@ -1,15 +1,17 @@
 {% assign blog = section.settings.custom-blog %}
 {% unless blog.articles_count==0 %}
   {% for article  in blog.articles limit: section.settings.blog-range %}
-    <div class="grid__item medium-up--one-third">
-      <a href="{{article.url}}">
-        {{article.image.src | img_url: "500x" | img_tag}}
-      </a>
-      <br>
-      <a href="{{article.url}}">
-        {{article.title}}
-      </a>
-      <br>
+    <div class="grid">
+      <div class="grid__item medium-up--one-third">
+        <a href="{{article.url}}">
+          {{article.image.src | img_url: "500x" | img_tag}}
+        </a>
+        <br>
+        <a href="{{article.url}}">
+          {{article.title}}
+        </a>
+        <br>
+      </div>
     </div>
   {% endfor %}
 {% endunless %}
