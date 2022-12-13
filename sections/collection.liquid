@@ -28,7 +28,7 @@
                         <div class="card__information">
                             <h3 class="card__heading h5">
                                 <a href="/products/trench-coat-1"  class="full-unstyled-link">
-                                    Trench Coat
+                                    {{item.title}}
                                 </a>
                             </h3>
                             <div class="card-information">
@@ -53,11 +53,6 @@
     {% endfor %}         
   </slider-component>
 </div>
-
-  
-    {{item.title}}
-
-
 {% schema  %}
   {
     "name": "collection",
