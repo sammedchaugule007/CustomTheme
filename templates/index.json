@@ -1,18 +1,20 @@
 {
   "sections": {
-    "448c6382-21f1-4807-97ce-63134ae67d3b": {
-      "type": "customHeader",
+    "428b2870-0096-4767-8a3f-5beec947e9e5": {
+      "type": "custom-header",
       "settings": {
+        "headerMessage": "Free Delivery on Thursdays",
+        "showMessage": true
       }
     },
-    "dc37e799-5255-4d52-bd22-63cc440aa89b": {
-      "type": "CustomBanner",
+    "1ee27948-8727-4812-b1df-fb75e9eb2ff4": {
+      "type": "custom-banner",
       "settings": {
-        "itemName1": "women's latest fashion sale",
+        "itemName1": "",
         "customBanner1": 20,
-        "itemName2": "modern sunglasses",
+        "itemName2": "",
         "customBanner2": 12,
-        "itemName3": "new fashion summer sale",
+        "itemName3": "",
         "customBanner3": 15
       }
     },
@@ -48,8 +50,8 @@
     }
   },
   "order": [
-    "448c6382-21f1-4807-97ce-63134ae67d3b",
-    "dc37e799-5255-4d52-bd22-63cc440aa89b",
+    "428b2870-0096-4767-8a3f-5beec947e9e5",
+    "1ee27948-8727-4812-b1df-fb75e9eb2ff4",
     "video",
     "d8307ae6-4477-4383-b020-120171a4bb6f"
   ]
