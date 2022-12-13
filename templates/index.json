@@ -9,11 +9,11 @@
       "type": "CustomBanner",
       "settings": {
         "itemName1": "women's latest fashion sale",
-        "customBanner1": "20",
+        "customBanner1": 20,
         "itemName2": "modern sunglasses",
-        "customBanner2": "12",
+        "customBanner2": 12,
         "itemName3": "new fashion summer sale",
-        "customBanner3": "15"
+        "customBanner3": 15
       }
     },
     "video": {
