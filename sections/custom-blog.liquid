@@ -1,7 +1,7 @@
 {% assign blog = section.settings.custom-blog %}
 {% unless blog.articles_count==0 %}
   {% for article  in blog.articles limit: section.settings.blog-range %}
-    <div class="blog__posts articles-wrapper contains-card contains-card--article{% if settings.card_style == 'standard' %} contains-card--standard{% endif %} grid grid--peek grid--2-col-tablet grid--3-col-desktop slider slider--tablet " role="list">">
+    <div class="blog__posts articles-wrapper contains-card contains-card--article{% if settings.card_style == 'standard' %} contains-card--standard{% endif %} grid grid--peek grid--2-col-tablet grid--3-col-desktop slider slider--tablet " role="list">
       <a href="{{article.url}}">
         {{article.image.src | img_url: "500x" | img_tag}}
       </a>
