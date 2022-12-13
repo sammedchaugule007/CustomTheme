@@ -1,7 +1,7 @@
 {% assign blog = section.settings.custom-blog %}
 {% unless blog.articles_count==0 %}
   {% for article  in blog.articles limit: section.settings.blog-range %}
-    <div class="grid__item medium-up--one-third">
+    <div class="blog__view-all center small-hide medium-hide">
       <a href="{{article.url}}">
         {{article.image.src | img_url: "500x" | img_tag}}
       </a>
