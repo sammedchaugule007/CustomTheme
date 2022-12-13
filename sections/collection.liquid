@@ -182,9 +182,9 @@
   </slider-component>
 </div>
 {% for item  in section.settings.products limit:4  %}  
-    {{item.title[2]}}
+    {{item.title}}
 {% endfor %}
-{{section.settings.products[2]}}
+{{section.settings.products[2].title}}
 
 {% schema  %}
   {
