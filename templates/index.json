@@ -34,7 +34,7 @@
     "9f31bc4a-94b9-4c33-a6c6-3976f64297d2": {
       "type": "custom-blog",
       "settings": {
-        "blog-range": 3,
+        "blog-range": 6,
         "custom-blog": "news"
       }
     },
