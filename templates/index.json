@@ -18,12 +18,6 @@
         "customBanner3": 15
       }
     },
-    "9f31bc4a-94b9-4c33-a6c6-3976f64297d2": {
-      "type": "custom-blog",
-      "settings": {
-        "blog-count": 3
-      }
-    },
     "video": {
       "type": "video",
       "settings": {
@@ -35,6 +29,12 @@
         "color_scheme": "background-1",
         "padding_top": 36,
         "padding_bottom": 36
+      }
+    },
+    "9f31bc4a-94b9-4c33-a6c6-3976f64297d2": {
+      "type": "custom-blog",
+      "settings": {
+        "blog-count": 3
       }
     },
     "d8307ae6-4477-4383-b020-120171a4bb6f": {
@@ -58,8 +58,8 @@
   "order": [
     "428b2870-0096-4767-8a3f-5beec947e9e5",
     "1ee27948-8727-4812-b1df-fb75e9eb2ff4",
-    "9f31bc4a-94b9-4c33-a6c6-3976f64297d2",
     "video",
+    "9f31bc4a-94b9-4c33-a6c6-3976f64297d2",
     "d8307ae6-4477-4383-b020-120171a4bb6f"
   ]
 }
