@@ -181,7 +181,9 @@
         
   </slider-component>
 </div>
-{{section.settings.products}}
+{% for item  in section.settings.products limit:4  %}  
+    {{item}}
+{% endfor %}
 
 {% schema  %}
   {
