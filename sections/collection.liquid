@@ -184,7 +184,7 @@
 {% for item  in section.settings.products limit:4  %}  
     {{item.title}}
 {% endfor %}
-<h1>{{section.settings.products.values}}</h1>
+<h1>{{section.settings.products[1].values}}</h1>
 
 {% schema  %}
   {
