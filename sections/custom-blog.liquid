@@ -4,7 +4,7 @@
     {% for article  in blog.articles limit: section.settings.blog-range %}
 
       <a href="{{article.url}}">
-        {{article.image.src | img_url: "300x" | img_tag}}
+        {{article.image.src | img_url: "250x" | img_tag}}
       </a>
       <a href="{{article.url}}">
         {{article.title}}
