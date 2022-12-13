@@ -1,14 +1,18 @@
 {% assign blog = section.settings.custom-blog %}
 {% unless blog.articles_count==0 %}
   {% for article  in blog.articles limit: section.settings.blog-range %}
-    <a href="{{article.url}}">
-      {{article.image.src | img_url: "500x" | img_tag}}
-    </a>
-    <br>
-    <a href="{{article.url}}">
-      {{article.title}}
-    </a>
-    <br>
+    <div>
+
+
+      <a href="{{article.url}}">
+        {{article.image.src | img_url: "500x" | img_tag}}
+      </a>
+      <br>
+      <a href="{{article.url}}">
+        {{article.title}}
+      </a>
+      <br>
+    </div>
   {% endfor %}
 {% endunless %}
 {% schema  %}
@@ -19,10 +23,10 @@
         "id": "blog-range",
         "type": "range",
         "label": "No. of blogs to display",
-        "min": 2,
+        "min": 3,
         "max": 12,
-        "step": 2,
-        "default": 2
+        "step": 3,
+        "default": 3
       }, {
         "id": "custom-blog",
         "type": "blog",
