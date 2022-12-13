@@ -1,8 +1,13 @@
 {% assign blog = section.settings.custom-blog %}
 {% unless blog.articles_count==0 %}
   {% for article  in blog.articles limit: section.settings.blog-range %}
-    {{article.image.src | img_url: "500x" | img_tag}}
-    {{article.title}}
+    <a href="{{article.url}}">
+      {{article.image.src | img_url: "500x" | img_tag}}
+    </a>
+    <a href="{{article.url}}">
+      {{article.title}}
+    </a>
+
   {% endfor %}
 {% endunless %}
 {% schema  %}
