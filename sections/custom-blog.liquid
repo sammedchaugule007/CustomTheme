@@ -1,4 +1,5 @@
 {{section.settings.blog-count}}
+{% assign blog = blog[section.settings.custom-blog] %}
 {{blog.articles_count}}
 
 {% schema  %}
@@ -14,9 +15,9 @@
         "step": 3,
         "default": 3
       }, {
-        "id": "blog",
+        "id": "custom-blog",
         "type": "blog",
-        "label": "Blog"
+        "label": "Custom Blog"
       }
     ],
     "presets": [
