@@ -82,6 +82,11 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "91ae8129-f941-4ccb-9ff3-c139a1217bca": {
+      "type": "collection",
+      "settings": {
+      }
     }
   },
   "order": [
@@ -90,6 +95,7 @@
     "video",
     "9f31bc4a-94b9-4c33-a6c6-3976f64297d2",
     "d8307ae6-4477-4383-b020-120171a4bb6f",
-    "20286f98-896f-401b-a8b8-b7d5917e5277"
+    "20286f98-896f-401b-a8b8-b7d5917e5277",
+    "91ae8129-f941-4ccb-9ff3-c139a1217bca"
   ]
 }
