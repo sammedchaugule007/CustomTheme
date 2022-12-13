@@ -32,8 +32,7 @@
 
     <div class="header-alert-news">
       <p>
-        <b>Free Shipping</b>
-        This Week Order Over - $55
+        {{section.settings.headerMessage}}
       </p>
     </div>
 
@@ -65,7 +64,13 @@
 {% schema %}
   {
     "name": "CustomHeader",
-    "settings": [],
+    "settings": [
+      {
+        "id":"headerMessage",
+        "type":"text",
+        "label":"Enter message"
+      }
+    ],
     "presets":[
         {
             "name":"CustomHeader",
