@@ -8,7 +8,12 @@
     "dc37e799-5255-4d52-bd22-63cc440aa89b": {
       "type": "CustomBanner",
       "settings": {
-        "customBanner": "20"
+        "itemName1": "women's latest fashion sale",
+        "customBanner1": "20",
+        "itemName2": "modern sunglasses",
+        "customBanner2": "12",
+        "itemName3": "new fashion summer sale",
+        "customBanner3": "15"
       }
     },
     "video": {
