@@ -21,6 +21,12 @@
     "91ae8129-f941-4ccb-9ff3-c139a1217bca": {
       "type": "collection",
       "settings": {
+        "product-list": [
+          "denim-jacket",
+          "shirt",
+          "trench-coat",
+          "trench-coat-1"
+        ]
       }
     },
     "20286f98-896f-401b-a8b8-b7d5917e5277": {
