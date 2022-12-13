@@ -34,11 +34,13 @@
     "9f31bc4a-94b9-4c33-a6c6-3976f64297d2": {
       "type": "custom-blog",
       "settings": {
+        "blog-range": 3,
         "custom-blog": "news"
       }
     },
     "d8307ae6-4477-4383-b020-120171a4bb6f": {
       "type": "featured-blog",
+      "disabled": true,
       "settings": {
         "heading": "Blog post",
         "heading_size": "h1",
