@@ -14,7 +14,7 @@
                         
                         <div class="card__media">
                             <a href="/products/{{item.title |  replace: ' ', '-'}}">
-                                {{item.images | first | img_tag| size:"400x"}}
+                                {{item.images | first | img_tag }}
                             </a>
                             {%- comment -%} <div class="media media--transparent media--hover-effect">
                                 {{item.images | first | img_tag}}    
