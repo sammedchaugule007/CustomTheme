@@ -46,14 +46,11 @@
                             </a>
                             </div> {%- endcomment -%}
                             <div class="media media--transparent media--hover-effect">
-                                <img src={{item.images | first | img_url:'500x' }}>
-                                    
+                                <a href="/products/{{item.title |  replace: ' ', '-'}}">
+                                    <img src={{item.images | first | img_url:'500x' }}>
+                                </a>     
                             </div> 
-                            <div class="card__content">
-                                <div class="card__badge bottom left">
-                                    <span class="badge badge--bottom-left color-accent-2">Sale</span>
-                                </div>
-                            </div>
+                            
                         </div>
                           
                     </div>
