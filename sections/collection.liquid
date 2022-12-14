@@ -58,7 +58,6 @@
                         <div class="card__information">
                             <h3 class="card__heading h5">
                                 <a href="/products/{{item.title |  replace: ' ', '-'}}"  class="full-unstyled-link">
-                                    
                                     {{item.title}}
                                 </a>
                             </h3>
@@ -69,7 +68,7 @@
                                             <br>
                                             <span>
                                                 <s class="price-item price-item--regular">{{item.compare_at_price | money_with_currency}}</s>
-                                            </span>
+                                            </span><br>
                                             <span class="price-item price-item--sale price-item--last">
                                                 {{item.price |money_with_currency}}
                                             </span>
