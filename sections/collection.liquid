@@ -46,7 +46,8 @@
                             </a>
                             </div> {%- endcomment -%}
                             <div class="media media--transparent media--hover-effect">
-                                {{item.images | first | img_tag}}    
+                                <img src={{item.images | first | img_url:'300x' }}>
+                                    
                             </div> 
                             <div class="card__content">
                                 <div class="card__badge bottom left">
