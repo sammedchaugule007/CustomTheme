@@ -29,6 +29,17 @@
         ]
       }
     },
+    "0edb2edf-75c7-4170-b328-e838a53d1b26": {
+      "type": "collection",
+      "settings": {
+        "products": [
+          "cowboy-hat",
+          "formal-shoes",
+          "louis-philippe-brown-formal-shoes",
+          "monarcho-hightop-stud-sneakers-in-brown"
+        ]
+      }
+    },
     "d98bea78-319a-4fd0-a076-c00c067ad267": {
       "type": "featured-collection",
       "disabled": true,
@@ -101,6 +112,7 @@
     "428b2870-0096-4767-8a3f-5beec947e9e5",
     "1ee27948-8727-4812-b1df-fb75e9eb2ff4",
     "91ae8129-f941-4ccb-9ff3-c139a1217bca",
+    "0edb2edf-75c7-4170-b328-e838a53d1b26",
     "d98bea78-319a-4fd0-a076-c00c067ad267",
     "video",
     "9f31bc4a-94b9-4c33-a6c6-3976f64297d2",
