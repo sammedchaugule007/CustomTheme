@@ -21,6 +21,7 @@
     "91ae8129-f941-4ccb-9ff3-c139a1217bca": {
       "type": "collection",
       "settings": {
+        "collection-name": "WINTER COLLECTION",
         "products": [
           "denim-jacket",
           "shirt",
@@ -32,6 +33,7 @@
     "0edb2edf-75c7-4170-b328-e838a53d1b26": {
       "type": "collection",
       "settings": {
+        "collection-name": "ACCESSORIES",
         "products": [
           "cowboy-hat",
           "louis-philippe-brown-formal-shoes",
