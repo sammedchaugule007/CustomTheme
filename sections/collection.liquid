@@ -40,14 +40,14 @@
                     <div class="card__inner color-background-2 gradient ratio" style="--ratio-percent: 87.5%;">
                         
                         <div class="card__media">
-                            <div class="media--transparent media--hover-effect">
+                            {%- comment -%} <div class="media--transparent media--hover-effect">
                             <a href="/products/{{item.title |  replace: ' ', '-'}}">
                                 <img src={{item.images | first | img_url:'' }}>
                             </a>
-                            </div>
-                            {%- comment -%} <div class="media media--transparent media--hover-effect">
-                                {{item.images | first | img_tag}}    
                             </div> {%- endcomment -%}
+                            <div class="media media--transparent media--hover-effect">
+                                {{item.images | first | img_tag}}    
+                            </div> 
                             <div class="card__content">
                                 <div class="card__badge bottom left">
                                     <span class="badge badge--bottom-left color-accent-2">Sale</span>
