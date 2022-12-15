@@ -11,6 +11,7 @@
       "type": "custom-banner",
       "settings": {
         "itemName1": "women's latest fashion sale",
+        "banner-image1": "shopify:\/\/shop_images\/banner-2.jpg",
         "customBanner1": 20,
         "itemName2": "modern sunglasses",
         "customBanner2": 12,
