@@ -70,9 +70,10 @@
     </div>
 
     <script>
-      document.getElementsByClassName("banner-title").style.color= "{{section.settings['text-color']}}";
+      document.querySelector(".banner-title").style.color= "{{section.settings['text-color']}}";
+      
     </script>
-
+{%- comment -%} getElementsByClassName("banner-title").style.color= "{{section.settings['text-color']}}"; {%- endcomment -%}
 {% schema %}
   {
     "name": "CustomBanner",
