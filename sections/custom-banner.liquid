@@ -70,7 +70,10 @@
     </div>
 
     <script>
-      document.querySelectorAll(".banner-title").style.color= "{{section.settings['text-color']}}";
+      var bannerTitle=document.querySelectorAll(".banner-title");
+      for (var i=0 ; i<bannerTitle.length; i++){
+        bannerTitle[i].style.color= "{{section.settings['text-color']}}";
+      }
       
     </script>
 {%- comment -%} getElementsByClassName("banner-title").style.color= "{{section.settings['text-color']}}"; {%- endcomment -%}
