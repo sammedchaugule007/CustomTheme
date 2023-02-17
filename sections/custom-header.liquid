@@ -1,10 +1,11 @@
 <div class="header-top">
 
+  {% if customer %}
+    Hello, {{ customer.first_name }}!
+  {% endif %}
   <div class="container" style="font-size:2rem">
 
-    {% if customer %}
-      Hello, {{ customer.first_name }}!
-    {% endif %}
+    
     <ul class="header-social-container">
 
       <li>
