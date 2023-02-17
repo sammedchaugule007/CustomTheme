@@ -19,6 +19,7 @@
     <script>
       var dataLayer = [];
     </script>
+    <script src="../assets/theme.js"></script>
 
     <title>
       {{ page_title }}
@@ -45,10 +46,10 @@
     {{ content_for_header }}
 
     {%- liquid
-           assign body_font_bold = settings.type_body_font | font_modify: 'weight', 'bold'
-           assign body_font_italic = settings.type_body_font | font_modify: 'style', 'italic'
-           assign body_font_bold_italic = body_font_bold | font_modify: 'style', 'italic'
-         %}
+            assign body_font_bold = settings.type_body_font | font_modify: 'weight', 'bold'
+            assign body_font_italic = settings.type_body_font | font_modify: 'style', 'italic'
+            assign body_font_bold_italic = body_font_bold | font_modify: 'style', 'italic'
+          %}
 
     {% style %}
       {{ settings.type_body_font | font_face: font_display: 'swap' }}
@@ -391,6 +392,5 @@
     {%- if settings.predictive_search_enabled -%}
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
-    <script src="../assets/theme.js"></script>
   </body>
 </html>
