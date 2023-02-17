@@ -24,13 +24,14 @@
     {%- assign cartEmpty_var = cart.empty? -%}
     {%- assign itemCount_var = cart.item_count -%}
     <script>
-      var customer_var ='{{customer_var}}';
-      if (customer_var) {
-        dataLayer.push({'loggedIn': 'true', 'name': customer_var});
-        console.log('Pushed in dataLayer');
+      var customer ='{{customer_var}}';
+      var cartEmpty ='{{cartEmpty_var}}';
+      var itemCount ='{{itemCount_var}}';
+      if (customer) {
+        dataLayer.push({'loggedIn': 'true', 'name': customer});
       }
-      if (cartEmpty_var == false) {
-        dataLayer.push({'itemCount': itemCount_var});
+      if (cartEmpty == false) {
+        dataLayer.push({'itemCount': itemCount});
       }
     </script>
 
@@ -63,10 +64,10 @@
     {{ content_for_header }}
 
     {%- liquid
-                              assign body_font_bold = settings.type_body_font | font_modify: 'weight', 'bold'
-                              assign body_font_italic = settings.type_body_font | font_modify: 'style', 'italic'
-                              assign body_font_bold_italic = body_font_bold | font_modify: 'style', 'italic'
-                            %}
+                                assign body_font_bold = settings.type_body_font | font_modify: 'weight', 'bold'
+                                assign body_font_italic = settings.type_body_font | font_modify: 'style', 'italic'
+                                assign body_font_bold_italic = body_font_bold | font_modify: 'style', 'italic'
+                              %}
 
     {% style %}
       {{ settings.type_body_font | font_face: font_display: 'swap' }}
