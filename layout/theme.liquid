@@ -20,6 +20,16 @@
       var dataLayer = [];
     </script>
 
+    {%- assign customer_var = customer -%}
+    <script>
+      var customer_var ='{{customer_var}}';
+      console.log(customer_var);
+      if (customer_var) {
+        dataLayer.push({'logInStatus': 'true'});
+        console.log('Logged In');
+      }
+    </script>
+
     {%- comment -%}
       <script src="{{'../assets/theme.js'| asset_url}}"></script>
     {%- endcomment -%}
@@ -49,10 +59,10 @@
     {{ content_for_header }}
 
     {%- liquid
-                      assign body_font_bold = settings.type_body_font | font_modify: 'weight', 'bold'
-                      assign body_font_italic = settings.type_body_font | font_modify: 'style', 'italic'
-                      assign body_font_bold_italic = body_font_bold | font_modify: 'style', 'italic'
-                    %}
+                       assign body_font_bold = settings.type_body_font | font_modify: 'weight', 'bold'
+                       assign body_font_italic = settings.type_body_font | font_modify: 'style', 'italic'
+                       assign body_font_bold_italic = body_font_bold | font_modify: 'style', 'italic'
+                     %}
 
     {% style %}
       {{ settings.type_body_font | font_face: font_display: 'swap' }}
@@ -339,15 +349,6 @@
   </head>
 
   <body class="gradient">
-    {{% assign customer_var = customer %}}
-    <script>
-      var customer_var ='{{customer_var}}';
-      console.log(customer_var);
-      if (customer_var) {
-        dataLayer.push({'logInStatus': 'true'});
-        console.log('Logged In');
-      }
-    </script>
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
       {{ "accessibility.skip_to_text" | t }}
     </a>
