@@ -1,4 +1,4 @@
-var customer="{{customer}}";
+
 console.log(customer);
 if (customer){
     dataLayer.push({'logInStatus':'true'});
