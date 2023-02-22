@@ -8,6 +8,10 @@
     <link rel="canonical" href="{{ canonical_url }}">
     <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
 
+    <script>
+      window.dataLayer = [];
+    </script>
+
     {%- if settings.favicon != blank -%}
       <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
     {%- endif -%}
@@ -16,9 +20,6 @@
       <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
     {%- endunless -%}
 
-    <script>
-      window.dataLayer = [];
-    </script>
 
     {%- assign customer_var = customer.first_name -%}
     {%- assign itemCount_var = cart.item_count -%}
@@ -62,10 +63,10 @@
     {{ content_for_header }}
 
     {%- liquid
-                                        assign body_font_bold = settings.type_body_font | font_modify: 'weight', 'bold'
-                                        assign body_font_italic = settings.type_body_font | font_modify: 'style', 'italic'
-                                        assign body_font_bold_italic = body_font_bold | font_modify: 'style', 'italic'
-                                      %}
+                                         assign body_font_bold = settings.type_body_font | font_modify: 'weight', 'bold'
+                                         assign body_font_italic = settings.type_body_font | font_modify: 'style', 'italic'
+                                         assign body_font_bold_italic = body_font_bold | font_modify: 'style', 'italic'
+                                       %}
 
     {% style %}
       {{ settings.type_body_font | font_face: font_display: 'swap' }}
