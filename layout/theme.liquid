@@ -22,18 +22,20 @@
     {%- endunless -%}
 
 
-    {%- assign customer_var = customer.first_name -%}
-    {%- assign itemCount_var = cart.item_count -%}
-    <script>
+    {%- comment -%}
+      {%- assign customer_var = customer.first_name -%}
+      {%- assign itemCount_var = cart.item_count -%}
+      <script>
       var customer ='{{customer_var}}';
       var itemCount ='{{itemCount_var}}';
       if (customer) {
-        dataLayer.push({'loggedIn': 'true', 'name': customer});
+      dataLayer.push({'loggedIn': 'true', 'name': customer});
       }
       if (itemCount > 0) {
-        dataLayer.push({'itemCount': itemCount});
+      dataLayer.push({'itemCount': itemCount});
       }
-    </script>
+      </script>
+    {%- endcomment -%}
 
     {%- comment -%}
       <script src="{{'../assets/theme.js'| asset_url}}"></script>
@@ -64,10 +66,10 @@
     {{ content_for_header }}
 
     {%- liquid
-                                                        assign body_font_bold = settings.type_body_font | font_modify: 'weight', 'bold'
-                                                        assign body_font_italic = settings.type_body_font | font_modify: 'style', 'italic'
-                                                        assign body_font_bold_italic = body_font_bold | font_modify: 'style', 'italic'
-                                                      %}
+                                                         assign body_font_bold = settings.type_body_font | font_modify: 'weight', 'bold'
+                                                         assign body_font_italic = settings.type_body_font | font_modify: 'style', 'italic'
+                                                         assign body_font_bold_italic = body_font_bold | font_modify: 'style', 'italic'
+                                                       %}
 
     {% style %}
       {{ settings.type_body_font | font_face: font_display: 'swap' }}
