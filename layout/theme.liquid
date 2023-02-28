@@ -22,6 +22,9 @@
     {%- endunless -%}
 
 
+    {%- comment -%}
+      Customer Login event push in dataLayer
+    {%- endcomment -%}
 
     {%- assign customer_var = customer.first_name -%}
     {%- assign itemCount_var = cart.item_count -%}
@@ -31,9 +34,16 @@
       if (customer) {
         dataLayer.push({'loggedIn': 'true', 'name': customer});
       }
-      if (itemCount > 0) {
-        dataLayer.push({'itemCount': itemCount});
-      }
+      analytics.subscribe("product_added_to_cart", event => {
+        console.log(dataLayer);
+        if (dataLayer) {
+          dataLayer.push({'Cart': 'Active'});
+        } else {
+          console.log("Data layer is not present");
+        }
+
+//    pixel("track", "event_name", event.data);
+      });
     </script>
 
 
@@ -66,10 +76,10 @@
     {{ content_for_header }}
 
     {%- liquid
-                                                           assign body_font_bold = settings.type_body_font | font_modify: 'weight', 'bold'
-                                                           assign body_font_italic = settings.type_body_font | font_modify: 'style', 'italic'
-                                                           assign body_font_bold_italic = body_font_bold | font_modify: 'style', 'italic'
-                                                         %}
+                                                            assign body_font_bold = settings.type_body_font | font_modify: 'weight', 'bold'
+                                                            assign body_font_italic = settings.type_body_font | font_modify: 'style', 'italic'
+                                                            assign body_font_bold_italic = body_font_bold | font_modify: 'style', 'italic'
+                                                          %}
 
     {% style %}
       {{ settings.type_body_font | font_face: font_display: 'swap' }}
