@@ -34,11 +34,14 @@
       if (customer) {
         dataLayer.push({'loggedIn': 'true', 'name': customer});
       }
+      analytics.subscribe("product_added_to_cart", event => {
+        console.log(dataLayer);
+        dataLayer.push({'Cart': 'Active'});
+
+//    pixel("track", "event_name", event.data);
+      });
     </script>
-    analytics.subscribe("product_added_to_cart", event => {
-          console.log(dataLayer);
-          dataLayer.push({'Cart': 'Active'});
-        });
+
 
 
     <script src="{{'../assets/theme.js'| asset_url}}"></script>
