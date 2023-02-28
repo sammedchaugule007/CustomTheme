@@ -36,11 +36,7 @@
       }
       analytics.subscribe("product_added_to_cart", event => {
         console.log(dataLayer);
-        if (dataLayer) {
-          dataLayer.push({'Cart': 'Active'});
-        } else {
-          console.log("Data layer is not present");
-        }
+        dataLayer.push({'Cart': 'Active'});
 
 //    pixel("track", "event_name", event.data);
       });
@@ -76,10 +72,10 @@
     {{ content_for_header }}
 
     {%- liquid
-                                                            assign body_font_bold = settings.type_body_font | font_modify: 'weight', 'bold'
-                                                            assign body_font_italic = settings.type_body_font | font_modify: 'style', 'italic'
-                                                            assign body_font_bold_italic = body_font_bold | font_modify: 'style', 'italic'
-                                                          %}
+                                                             assign body_font_bold = settings.type_body_font | font_modify: 'weight', 'bold'
+                                                             assign body_font_italic = settings.type_body_font | font_modify: 'style', 'italic'
+                                                             assign body_font_bold_italic = body_font_bold | font_modify: 'style', 'italic'
+                                                           %}
 
     {% style %}
       {{ settings.type_body_font | font_face: font_display: 'swap' }}
