@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="theme-color" content="">
     <script>
-      window.dataLayer = [];
+      window.dataLayer = window.dataLayer ?? [];
     </script>
 
     <link rel="canonical" href="{{ canonical_url }}">
@@ -68,10 +68,10 @@
     {{ content_for_header }}
 
     {%- liquid
-                                                            assign body_font_bold = settings.type_body_font | font_modify: 'weight', 'bold'
-                                                            assign body_font_italic = settings.type_body_font | font_modify: 'style', 'italic'
-                                                            assign body_font_bold_italic = body_font_bold | font_modify: 'style', 'italic'
-                                                          %}
+                                                             assign body_font_bold = settings.type_body_font | font_modify: 'weight', 'bold'
+                                                             assign body_font_italic = settings.type_body_font | font_modify: 'style', 'italic'
+                                                             assign body_font_bold_italic = body_font_bold | font_modify: 'style', 'italic'
+                                                           %}
 
     {% style %}
       {{ settings.type_body_font | font_face: font_display: 'swap' }}
