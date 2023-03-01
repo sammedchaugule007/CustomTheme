@@ -13,10 +13,12 @@ function callback(mutationList, observer) {
                 if(count<changedCount)
                 {
                     console.log("added item") ;
+                    count = changedCount ;
 
                 }
                 else{
                     console.log("item removed") ;
+                    count = changedCount ;
                 }
 
                 }
