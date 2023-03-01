@@ -1,4 +1,4 @@
 
-console.log(customer);
+// console.log(customer);
 
   
