@@ -14,7 +14,7 @@ function callback(mutationList, observer) {
                 if(mutation.removedNodes)
                 {
               console.log("removed changes");
-              console.log(mutation.removedNodes[3]);
+              console.log((mutation.addedNodes[3]?.children[0]?.innerHTML));
                 }
           break;
         case "attributes":
