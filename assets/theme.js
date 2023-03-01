@@ -12,7 +12,7 @@ function callback(mutationList, observer) {
                 }
                 else if(mutation.removedNodes)
                 {
-              console.log("childnode changes");
+              console.log("removed changes");
               console.log(mutation.removedNodes);
                 }
           break;
