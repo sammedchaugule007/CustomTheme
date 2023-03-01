@@ -21,12 +21,13 @@ function callback(mutationList, observer) {
   }
 
 const targetNode = document.querySelector("#cart-notification");
+console.log(document.querySelector("#cart-notification"));
 const observerOptions = {
   childList: true,
   attributes: true,
 
   // Omit (or set to false) to observe only changes to the parent node
-  subtree: true,
+//   subtree: true,
 };
 
 const observer = new MutationObserver(callback);
