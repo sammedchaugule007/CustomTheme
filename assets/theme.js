@@ -12,11 +12,13 @@ function callback(mutationList, observer) {
                 if(count<changedCount)
                 {
                     console.log("added item") ;
+                    dataLayer.push({"event": "added_item"}) ;
                     count = changedCount ;
 
                 }
                 else{
                     console.log("item removed") ;
+                    dataLayer.push({"event": "removed_item"}) ;
                     count = changedCount ;
                 }
 
