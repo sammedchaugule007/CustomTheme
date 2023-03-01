@@ -11,11 +11,11 @@ function callback(mutationList, observer) {
                 console.log(mutation.addedNodes[3]?.children[0]?.innerHTML);
                 }
                 
-                if(mutation.removedNodes)
-                {
-              console.log("removed changes");
-              console.log((mutation.addedNodes[3]?.children[0]?.innerHTML));
-                }
+            //     if(mutation.removedNodes)
+            //     {
+            //   console.log("removed changes");
+            //   console.log((mutation.addedNodes[3]?.children[0]?.innerHTML));
+            //     }
           break;
         case "attributes":
           /* An attribute value changed on the element in
