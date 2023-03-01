@@ -7,8 +7,7 @@ function callback(mutationList, observer) {
              from the tree.
              (See mutation.addedNodes and mutation.removedNodes.) */
                 if (mutation.addedNodes){
-                    console.log(count);
-                console.log("added changes");
+                    
                 let changedCount= Number((mutation.addedNodes[3]?.children[0]?.innerHTML)??'0');
                 if(count<changedCount)
                 {
@@ -21,6 +20,7 @@ function callback(mutationList, observer) {
                     count = changedCount ;
                 }
 
+                console.log(count);
                 }
                 
             //     if(mutation.removedNodes)
