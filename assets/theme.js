@@ -31,15 +31,6 @@ function callback(mutationList, observer) {
             //   console.log((mutation.addedNodes[3]?.children[0]?.innerHTML));
             //     }
           break;
-        case "attributes":
-          /* An attribute value changed on the element in
-             mutation.target.
-             The attribute name is in mutation.attributeName, and
-             its previous value is in mutation.oldValue. */
-             console.log("Attribute changes");
-
-            
-          break;
       }
     });
   }
