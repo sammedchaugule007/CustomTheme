@@ -21,7 +21,7 @@ function callback(mutationList, observer) {
   }
 
 const targetNode = document.querySelector("#cart-notification");
-console.log(document.querySelector("#cart-notification"));
+console.log(document.getElementById("cart-notification"));
 const observerOptions = {
   childList: true,
   attributes: true,
