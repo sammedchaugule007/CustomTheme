@@ -20,7 +20,7 @@ function callback(mutationList, observer) {
     });
   }
 
-const targetNode = document.querySelector("#cart-notification");
+const targetNode = document.querySelector(".header__icon--cart");
 console.log(document.getElementById("cart-notification"));
 const observerOptions = {
   childList: true,
