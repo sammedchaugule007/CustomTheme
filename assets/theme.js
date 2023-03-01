@@ -9,8 +9,16 @@ function callback(mutationList, observer) {
                 if (mutation.addedNodes){
                     console.log(count);
                 console.log("added changes");
-                console.log(Number((mutation.addedNodes[3]?.children[0]?.innerHTML)??'0'));
-                // if()
+                let changedCount= Number((mutation.addedNodes[3]?.children[0]?.innerHTML)??'0');
+                if(count<changedCount)
+                {
+                    console.log("added item") ;
+
+                }
+                else{
+                    console.log("item removed") ;
+                }
+
                 }
                 
             //     if(mutation.removedNodes)
