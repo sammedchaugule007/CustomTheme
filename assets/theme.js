@@ -7,6 +7,7 @@ function callback(mutationList, observer) {
              from the tree.
              (See mutation.addedNodes and mutation.removedNodes.) */
                 if (mutation.addedNodes){
+                    console.log(count);
                 console.log("added changes");
                 console.log(mutation.addedNodes[3]?.children[0]?.innerHTML);
                 }
