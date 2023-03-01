@@ -6,8 +6,15 @@ function callback(mutationList, observer) {
           /* One or more children have been added to and/or removed
              from the tree.
              (See mutation.addedNodes and mutation.removedNodes.) */
-              console.log(mutation);
+                if (mutation.addedNodes){
+                console.log("added changes");
+                console.log(mutation.addedNodes);
+                }
+                else if(mutation.removedNodes)
+                {
               console.log("childnode changes");
+              console.log(mutation.removedNodes);
+                }
           break;
         case "attributes":
           /* An attribute value changed on the element in
