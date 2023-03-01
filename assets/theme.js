@@ -1,8 +1,7 @@
 
 function callback(mutationList, observer) {
     mutationList.forEach((mutation) => {
-      switch (mutation.type) {
-        case "childList":
+      if (mutation.type="childList") { 
           /* One or more children have been added to and/or removed
              from the tree.
              (See mutation.addedNodes and mutation.removedNodes.) */
