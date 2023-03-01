@@ -8,13 +8,13 @@ function callback(mutationList, observer) {
              (See mutation.addedNodes and mutation.removedNodes.) */
                 if (mutation.addedNodes){
                 console.log("added changes");
-                console.log(mutation.addedNodes);
+                console.log(mutation.addedNodes[3]);
                 }
                 
                 if(mutation.removedNodes)
                 {
               console.log("removed changes");
-              console.log(mutation.removedNodes);
+              console.log(mutation.removedNodes[3]);
                 }
           break;
         case "attributes":
