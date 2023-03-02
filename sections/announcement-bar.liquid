@@ -18,10 +18,7 @@
             </a>
           {%- endif -%}
         {%- endif -%}
-        {%- comment -%}
-          <img src={{section.settings.announceimg | image_url}} class="banner-img">
-        {%- endcomment -%}
-        <img src={{section.settings.announceimg}} class="banner-img">
+        <img src={{section.settings.announceimg | image_url}} alt="Announcement image" class="banner-img">
       </div>
   {%- endcase -%}
 {%- endfor -%}
