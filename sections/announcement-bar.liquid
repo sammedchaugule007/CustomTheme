@@ -19,13 +19,13 @@
           {%- endif -%}
         {%- endif -%}
         <img src={{section.settings.announceimg | image_url}} alt="Announcement image">
-
-        {%- assign imagee_var = section.settings.announceimg | image_url -%}
-        <script>
-          var imagee ='{{imagee_var}}';
-          console.log(imagee);
-        </script>
       </div>
+
+      {%- assign imagee_var = section.settings.announceimg | image_url -%}
+      <script>
+        var imagee ='{{imagee_var}}';
+        console.log(imagee);
+      </script>
   {%- endcase -%}
 {%- endfor -%}
 
