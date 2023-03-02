@@ -2,7 +2,15 @@
   "sections": {
     "3698a4eb-bf69-4a3a-bfb4-9a14b1b8338c": {
       "type": "announcement-bar-custom",
+      "custom_css": [
+        "#announce{}"
+      ],
       "settings": {
+        "announceimage": "shopify:\/\/shop_images\/MicrosoftTeams-image_9.jpg",
+        "text": "",
+        "text_alignment": "center",
+        "color_scheme": "accent-1",
+        "link": ""
       }
     },
     "428b2870-0096-4767-8a3f-5beec947e9e5": {
