@@ -6,6 +6,12 @@
 
           <div class="slider-item">
 
+            {%- assign imagee_var = section.settings.banner-image1 | image_url -%}
+      <script>
+        var imagee ='{{imagee_var}}';
+        console.log(imagee);
+      </script>
+
             <img src={{section.settings.banner-image1 | image_url}} alt="women's latest fashion sale" class="banner-img"> 
             <div class="banner-content">
 
