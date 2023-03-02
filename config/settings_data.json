@@ -121,21 +121,6 @@
     "sections": {
       "announcement-bar": {
         "type": "announcement-bar",
-        "blocks": {
-          "87b5bc7f-5232-4897-a340-a8be937dccf0": {
-            "type": "announcement",
-            "settings": {
-              "announceimg": "shopify:\/\/shop_images\/MicrosoftTeams-image_8.jpg",
-              "text": "Sign up now to get 60% off and unlock exclusive deals",
-              "text_alignment": "center",
-              "color_scheme": "accent-1",
-              "link": ""
-            }
-          }
-        },
-        "block_order": [
-          "87b5bc7f-5232-4897-a340-a8be937dccf0"
-        ],
         "settings": {
         }
       },
