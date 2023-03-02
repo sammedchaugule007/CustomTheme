@@ -18,10 +18,10 @@
             </a>
           {%- endif -%}
         {%- endif -%}
-        <img src={{section.settings.announceimg | image_url}} alt="Announcement image">
+        <img src={{section.settings.announceimage | image_url}} alt="Announcement image">
       </div>
 
-      {%- assign imagee_var = section.settings.announceimg | image_url -%}
+      {%- assign imagee_var = section.settings.announceimage | image_url -%}
       <script>
         var imagee ='{{imagee_var}}';
         console.log(imagee);
@@ -40,7 +40,7 @@
         "settings": [
           {
             "type": "image_picker",
-            "id": "announceimg",
+            "id": "announceimage",
             "label": "Upload Image"
           },
           {
