@@ -1,10 +1,8 @@
-
+/*
 function callback(mutationList, observer) {
     mutationList.forEach((mutation) => {
       if (mutation.type="childList") { 
-          /* One or more children have been added to and/or removed
-             from the tree.
-             (See mutation.addedNodes and mutation.removedNodes.) */
+        
                 if (mutation.addedNodes){
                     
                 let changedCount= Number((mutation.addedNodes[3]?.children[0]?.innerHTML)??'0');
@@ -45,3 +43,4 @@ const observerOptions = {
 
 const observer = new MutationObserver(callback);
 observer.observe(targetNode, observerOptions);
+*/
