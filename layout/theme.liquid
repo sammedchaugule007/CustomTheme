@@ -70,10 +70,10 @@
   {{ content_for_header }}
 
   {%- liquid
-                                                                                assign body_font_bold = settings.type_body_font | font_modify: 'weight', 'bold'
-                                                                                assign body_font_italic = settings.type_body_font | font_modify: 'style', 'italic'
-                                                                                assign body_font_bold_italic = body_font_bold | font_modify: 'style', 'italic'
-                                                                              %}
+                                                                                 assign body_font_bold = settings.type_body_font | font_modify: 'weight', 'bold'
+                                                                                 assign body_font_italic = settings.type_body_font | font_modify: 'style', 'italic'
+                                                                                 assign body_font_bold_italic = body_font_bold | font_modify: 'style', 'italic'
+                                                                               %}
 
   {% style %}
     {{ settings.type_body_font | font_face: font_display: 'swap' }}
@@ -382,6 +382,52 @@
     <li id="a11y-new-window-message">{{ 'accessibility.link_messages.new_window' | t }}
     </li>
   </ul>
+
+  <script>
+    const setPageName = function() {
+      var page = '';
+      if (location.pathname === '/') {
+        page = '/home';
+      } else {
+        page = location.pathname
+      }
+      return page
+    }
+    Analytics.autoTrack('pageView', {
+
+      // REQUIRED, turn on/off the auto tracking
+      enable: true,
+
+// OPTIONAL, the event name, by default is 'pageView'
+      eventName: 'pageView',
+
+// OPTIONAL, the attributes of the event, you can either pass an object or a function
+// which allows you to define dynamic attributes
+
+/*attributes: {
+        pageName: setPageName
+      },*/
+// when using function
+      attributes: () => {
+        const page = setPageName();
+        return {'pageName': page}
+      },
+
+// OPTIONAL, by default is 'multiPageApp'
+// you need to change it to 'SPA' if your app is a single-page app like React
+      type: 'multiPageApp',
+
+// OPTIONAL, the service provider, by default is the Amazon Pinpoint
+      provider: 'AWSPinpoint',
+
+// OPTIONAL, to get the current page url
+      getUrl: () => {
+
+// the default function
+        return window.location.origin + window.location.pathname;
+      }
+    });
+  </script>
 
   <script>
     window.shopUrl = '{{ request.origin }}';
