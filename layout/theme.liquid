@@ -33,7 +33,7 @@
   {%- assign itemCount_var = cart.item_count -%}
 
   {%- assign productName_var =   product.title -%}
-  {%- assign productPrice_var =   product.quantity -%}
+  {%- assign productPrice_var =   product.price -%}
 
 
 
@@ -416,9 +416,8 @@
       return page
     }
     function addToCart() {
-      alert(productPrice);
-      alert(document.querySelector('.quantity__input').value);
-      dataLayer.push({'product': productName, 'Price': productPrice});
+      let qty = Number(document.querySelector('.quantity__input').value));
+      dataLayer.push({'product': productName, 'Price': productPrice, "quantity":qty});
 
 
 // console.log();
