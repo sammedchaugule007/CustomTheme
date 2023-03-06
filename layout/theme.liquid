@@ -421,6 +421,7 @@
     }
     function addToCart() {
       alert(productPrice);
+      alert(document.querySelector('quantity__input').value);
       dataLayer.push({'product': productName, 'Price': productPrice});
       
 
