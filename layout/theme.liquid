@@ -9,10 +9,6 @@
   </script>
   <script>
     window.dataLayer = window.dataLayer ?? [];
-    var qty = 1;
-    function setQty(val) {
-      qty = val;
-      console.log(qty);
 
     }
   </script>
@@ -41,7 +37,7 @@
   {%- assign productName_var =   product.title -%}
   {%- assign productPrice_var =   product.quantity -%}
 
-  document.querySelector("quantity__input").value;
+  
 
 
 
@@ -426,7 +422,7 @@
     function addToCart() {
       alert(productPrice);
       dataLayer.push({'product': productName, 'Price': productPrice});
-
+      
 
 // console.log();
 
