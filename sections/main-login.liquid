@@ -136,7 +136,8 @@
         </a>
       {%- endif -%}
 
-      <button id="sign_in_btn" onclick="signInBtn()">
+      {%- comment -%} id="sign_in_btn" onclick="signInBtn()" {%- endcomment -%}
+      <button>
         {{ 'customer.login_page.sign_in' | t }}
       </button>
 
