@@ -47,8 +47,7 @@
         localStorage.setItem('loggedIn', 'Yes');
       }
     }
-    if (localStorage.getItem('loggedIn')) {
-      dataLayer.push({'loginStatus': 'false'});
+    else(localStorage.getItem('loggedIn')) {
       localStorage.removeItem('loggedIn');
     }
 
