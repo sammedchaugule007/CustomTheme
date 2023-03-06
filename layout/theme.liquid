@@ -9,6 +9,10 @@
   </script>
   <script>
     window.dataLayer = window.dataLayer ?? [];
+    const startevent = new Event("start");
+    document.addEventListener('start', () => {
+      console.log("Start event triggered")
+    });
   </script>
   <script src="https://cdn.shopify.com/s/files/1/0687/9251/6905/files/amplify-analytics.js?v=1677831555"></script>
   <link rel="canonical" href="{{ canonical_url }}">
@@ -79,10 +83,10 @@
   {{ content_for_header }}
 
   {%- liquid
-                                                                                                        assign body_font_bold = settings.type_body_font | font_modify: 'weight', 'bold'
-                                                                                                        assign body_font_italic = settings.type_body_font | font_modify: 'style', 'italic'
-                                                                                                        assign body_font_bold_italic = body_font_bold | font_modify: 'style', 'italic'
-                                                                                                      %}
+                                                                                                          assign body_font_bold = settings.type_body_font | font_modify: 'weight', 'bold'
+                                                                                                          assign body_font_italic = settings.type_body_font | font_modify: 'style', 'italic'
+                                                                                                          assign body_font_bold_italic = body_font_bold | font_modify: 'style', 'italic'
+                                                                                                        %}
 
   {% style %}
     {{ settings.type_body_font | font_face: font_display: 'swap' }}
