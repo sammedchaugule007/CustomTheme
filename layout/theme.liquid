@@ -46,8 +46,7 @@
         dataLayer.push({'loginStatus': 'true'});
         localStorage.setItem('loggedIn', 'Yes');
       }
-    }
-    else(localStorage.getItem('loggedIn')) {
+    } else if (localStorage.getItem('loggedIn')) {
       localStorage.removeItem('loggedIn');
     }
 
@@ -92,10 +91,10 @@
   {{ content_for_header }}
 
   {%- liquid
-                                                                                                                            assign body_font_bold = settings.type_body_font | font_modify: 'weight', 'bold'
-                                                                                                                            assign body_font_italic = settings.type_body_font | font_modify: 'style', 'italic'
-                                                                                                                            assign body_font_bold_italic = body_font_bold | font_modify: 'style', 'italic'
-                                                                                                                          %}
+                                                                                                                             assign body_font_bold = settings.type_body_font | font_modify: 'weight', 'bold'
+                                                                                                                             assign body_font_italic = settings.type_body_font | font_modify: 'style', 'italic'
+                                                                                                                             assign body_font_bold_italic = body_font_bold | font_modify: 'style', 'italic'
+                                                                                                                           %}
 
   {% style %}
     {{ settings.type_body_font | font_face: font_display: 'swap' }}
