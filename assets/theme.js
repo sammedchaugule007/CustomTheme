@@ -44,3 +44,7 @@ const observerOptions = {
 const observer = new MutationObserver(callback);
 observer.observe(targetNode, observerOptions);
 */
+
+
+const event = new Event("start");
+document.addEventListener('start', ()=>{ console.log("Start event triggered") });
