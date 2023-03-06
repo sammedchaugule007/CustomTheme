@@ -8,7 +8,7 @@
     <script src="https://cdn.shopify.com/s/files/1/0687/9251/6905/files/awsEvidently.js?v=1677764816" async>// window.dataLayer = [];
   </script>
   <script>
-    window.dataLayer = window.dataLayer ?? [];
+    // window.dataLayer = window.dataLayer ?? [];
     const startevent = new Event("start");
     document.addEventListener('start', () => {
       console.log("Start event triggered")
@@ -46,8 +46,7 @@
     var productName ='{{productName_var}}';
 
 
-    if (customer) {
-      dataLayer.push({'loggedIn': 'true', 'firstName': customer});
+    if (customer) { // dataLayer.push({'loggedIn': 'true', 'firstName': customer});
     }
 
 /*
@@ -83,10 +82,10 @@
   {{ content_for_header }}
 
   {%- liquid
-                                                                                                           assign body_font_bold = settings.type_body_font | font_modify: 'weight', 'bold'
-                                                                                                           assign body_font_italic = settings.type_body_font | font_modify: 'style', 'italic'
-                                                                                                           assign body_font_bold_italic = body_font_bold | font_modify: 'style', 'italic'
-                                                                                                         %}
+                                                                                                             assign body_font_bold = settings.type_body_font | font_modify: 'weight', 'bold'
+                                                                                                             assign body_font_italic = settings.type_body_font | font_modify: 'style', 'italic'
+                                                                                                             assign body_font_bold_italic = body_font_bold | font_modify: 'style', 'italic'
+                                                                                                           %}
 
   {% style %}
     {{ settings.type_body_font | font_face: font_display: 'swap' }}
@@ -407,8 +406,9 @@
       return page
     }
     function addToCart() {
-      dataLayer.push({'add_to_cart': productName});
-      console.log();
+
+// dataLayer.push({'add_to_cart': productName});
+// console.log();
 
 /*Analytics.record({
         name: 'add_to_cart',
