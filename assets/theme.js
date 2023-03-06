@@ -46,5 +46,3 @@ observer.observe(targetNode, observerOptions);
 */
 
 console.log("Added to main page");
-const startevent = new Event("start");
-document.addEventListener('start', ()=>{ console.log("Start event triggered") });
