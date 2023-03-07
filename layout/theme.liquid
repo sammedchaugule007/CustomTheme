@@ -34,7 +34,7 @@
 
   {%- assign productName_var =   product.title -%}
   {%- assign productPrice_var =   product.price -%}
-
+  {%- assign productType_var =   product.type -%}
 
 
   <script>
@@ -42,6 +42,7 @@
     var itemCount ='{{itemCount_var}}';
     var productName ='{{productName_var}}';
     var productPrice ='{{productPrice_var}}';
+    var productType ='{{productType_var}}';
     Number(productPrice);
     productPrice /= 100;
 
@@ -95,10 +96,10 @@
   {{ content_for_header }}
 
   {%- liquid
-                                                                                                                                                                       assign body_font_bold = settings.type_body_font | font_modify: 'weight', 'bold'
-                                                                                                                                                                       assign body_font_italic = settings.type_body_font | font_modify: 'style', 'italic'
-                                                                                                                                                                       assign body_font_bold_italic = body_font_bold | font_modify: 'style', 'italic'
-                                                                                                                                                                     %}
+                                                                                                                                                                        assign body_font_bold = settings.type_body_font | font_modify: 'weight', 'bold'
+                                                                                                                                                                        assign body_font_italic = settings.type_body_font | font_modify: 'style', 'italic'
+                                                                                                                                                                        assign body_font_bold_italic = body_font_bold | font_modify: 'style', 'italic'
+                                                                                                                                                                      %}
 
   {% style %}
     {{ settings.type_body_font | font_face: font_display: 'swap' }}
@@ -422,7 +423,8 @@
       dataLayer.push({
         name: 'added_to_cart',
         attributes: {
-          'product': productName
+          'product': productName,
+          'type': productType
         },
         metrics: {
           'Price': productPrice,
