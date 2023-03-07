@@ -56,21 +56,20 @@
         let EmailData = JSON.parse(newObject);
         if (localStorage.getItem('endpointUpdate')) {
 
-          newObject = window.localStorage.getItem("endpointUpdate");
-          EmailData = JSON.parse(newObject);
 
           if (EmailData.includes(customerEmail)) {
             console.log("Data present already");
           } else {
             console.log("Data is not present");
+            EmailData.push(customerEmail);
+            window.localStorage.setItem('endpointUpdate', JSON.stringify(EmailData));
+
           }
 
 
         } else {
           alert("EndpointUpdated");
-          newObject = window.localStorage.getItem("endpointUpdate");
-          EmailData = JSON.parse(newObject);
-          const endpointUpdate = EmailData ?? []
+          const endpointUpdate = []
           endpointUpdate.push(customerEmail);
           window.localStorage.setItem('endpointUpdate', JSON.stringify(endpointUpdate));
         }
@@ -120,10 +119,10 @@
   {{ content_for_header }}
 
   {%- liquid
-                                                                                                                                                                             assign body_font_bold = settings.type_body_font | font_modify: 'weight', 'bold'
-                                                                                                                                                                             assign body_font_italic = settings.type_body_font | font_modify: 'style', 'italic'
-                                                                                                                                                                             assign body_font_bold_italic = body_font_bold | font_modify: 'style', 'italic'
-                                                                                                                                                                           %}
+                                                                                                                                                                              assign body_font_bold = settings.type_body_font | font_modify: 'weight', 'bold'
+                                                                                                                                                                              assign body_font_italic = settings.type_body_font | font_modify: 'style', 'italic'
+                                                                                                                                                                              assign body_font_bold_italic = body_font_bold | font_modify: 'style', 'italic'
+                                                                                                                                                                            %}
 
   {% style %}
     {{ settings.type_body_font | font_face: font_display: 'swap' }}
