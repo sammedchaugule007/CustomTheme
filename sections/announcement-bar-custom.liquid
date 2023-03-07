@@ -1,4 +1,4 @@
-<div style="display:flex; justify-content:center ; " id="anounceImg" class="announcement-bar color-{{ block.settings.color_scheme }} gradient" role="region" aria-label="{{ 'sections.header.announcement' | t }}" {{ block.shopify_attributes }}>
+<div style="display:flex; " id="anounceImg" class="announcement-bar color-{{ block.settings.color_scheme }} gradient" role="region" aria-label="{{ 'sections.header.announcement' | t }}" {{ block.shopify_attributes }}>
   {%- if block.settings.text != blank -%}
     {%- if block.settings.link != blank -%}
       <a href="{{ block.settings.link }}" class="announcement-bar__link link link--text focus-inset animate-arrow">
@@ -23,6 +23,19 @@
   var imagee ='{{imagee_var}}';
   console.log(imagee);
 </script>
+
+{%- style -%}
+
+  #anounceImg {
+    display: flex;
+    justify-content: center;
+  }
+
+  #anounceImg img {
+    width: 80%;
+    max-width: 1151px
+  }
+{%- endstyle -%}
 
 {% schema %}
   {
