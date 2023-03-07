@@ -35,7 +35,7 @@
   {%- assign productName_var =   product.title -%}
   {%- assign productPrice_var =   product.price -%}
   {%- assign productType_var =   product.type -%}
-
+  {%- assign customerEmail_var =   customer.email -%}
 
   <script>
     var customer ='{{customer_var}}';
@@ -43,6 +43,7 @@
     var productName ='{{productName_var}}';
     var productPrice ='{{productPrice_var}}';
     var productType ='{{productType_var}}';
+    var customerEmail ='{{customerEmail_var}}';
     productPrice = parseFloat(productPrice) / 100;
 
 
@@ -50,6 +51,13 @@
       if (!localStorage.getItem('loggedIn')) {
         dataLayer.push({'loginStatus': 'true'});
         localStorage.setItem('loggedIn', 'Yes');
+
+        if (localStorage.getItem('endpointUpdate')) {} else {
+          const endpointUpdate = {
+            email: customerEmail
+          }
+          window.localStorage.setItem('endpointUpdate', JSON.stringify(endpointUpdate));
+        }
       }
     } else if (localStorage.getItem('loggedIn')) {
       localStorage.removeItem('loggedIn');
@@ -96,10 +104,10 @@
   {{ content_for_header }}
 
   {%- liquid
-                                                                                                                                                                          assign body_font_bold = settings.type_body_font | font_modify: 'weight', 'bold'
-                                                                                                                                                                          assign body_font_italic = settings.type_body_font | font_modify: 'style', 'italic'
-                                                                                                                                                                          assign body_font_bold_italic = body_font_bold | font_modify: 'style', 'italic'
-                                                                                                                                                                        %}
+                                                                                                                                                                           assign body_font_bold = settings.type_body_font | font_modify: 'weight', 'bold'
+                                                                                                                                                                           assign body_font_italic = settings.type_body_font | font_modify: 'style', 'italic'
+                                                                                                                                                                           assign body_font_bold_italic = body_font_bold | font_modify: 'style', 'italic'
+                                                                                                                                                                         %}
 
   {% style %}
     {{ settings.type_body_font | font_face: font_display: 'swap' }}
