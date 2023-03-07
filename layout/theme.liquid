@@ -54,12 +54,13 @@
 
         let newObject = window.localStorage.getItem("endpointUpdate");
         let EmailData = JSON.parse(newObject);
-        if (localStorage.getItem('endpointUpdate')) {
+        if (EmailData) {
 
 
           if (EmailData.includes(customerEmail)) {
             console.log("Data present already");
           } else {
+            alert("EndpointUpdated");
             console.log("Data is not present");
             EmailData.push(customerEmail);
             window.localStorage.setItem('endpointUpdate', JSON.stringify(EmailData));
@@ -119,10 +120,10 @@
   {{ content_for_header }}
 
   {%- liquid
-                                                                                                                                                                              assign body_font_bold = settings.type_body_font | font_modify: 'weight', 'bold'
-                                                                                                                                                                              assign body_font_italic = settings.type_body_font | font_modify: 'style', 'italic'
-                                                                                                                                                                              assign body_font_bold_italic = body_font_bold | font_modify: 'style', 'italic'
-                                                                                                                                                                            %}
+                                                                                                                                                                               assign body_font_bold = settings.type_body_font | font_modify: 'weight', 'bold'
+                                                                                                                                                                               assign body_font_italic = settings.type_body_font | font_modify: 'style', 'italic'
+                                                                                                                                                                               assign body_font_bold_italic = body_font_bold | font_modify: 'style', 'italic'
+                                                                                                                                                                             %}
 
   {% style %}
     {{ settings.type_body_font | font_face: font_display: 'swap' }}
