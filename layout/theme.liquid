@@ -36,6 +36,8 @@
   {%- assign productPrice_var =   product.price -%}
   {%- assign productType_var =   product.type -%}
   {%- assign customerEmail_var =   customer.email -%}
+  {%- assign customerId_var =   customer.id -%}
+  {%- assign customerLastName_var =   customer.last_name -%}
 
   <script>
     var customer ='{{customer_var}}';
@@ -44,6 +46,8 @@
     var productPrice ='{{productPrice_var}}';
     var productType ='{{productType_var}}';
     var customerEmail ='{{customerEmail_var}}';
+    var customerId ='{{customerId_var}}';
+    var customerLastName ='{{customerLastName_var}}'
     productPrice = parseFloat(productPrice) / 100;
 
 
@@ -60,7 +64,34 @@
           if (EmailData.includes(customerEmail)) {
             console.log("Data present already");
           } else {
-            alert("EndpointUpdated");
+            Analytics.updateEndpoint({
+              address: customerEmail, // The unique identifier for the recipient. For example, an address could be a device token, email address, or mobile phone number.
+              attributes: {
+
+// Custom attributes that your app reports to Amazon Pinpoint. You can use these attributes as selection criteria when you create a segment.
+// MUST be an array, even single value
+              },
+              channelType: 'EMAIL',
+
+// The channel type. Valid values: APNS, GCM
+
+/** Indicates whether a user has opted out of receiving messages with one of the following values:
+                 * ALL - User has opted out of all messages.
+                 * NONE - Users has not opted out and receives all messages.
+                 */
+              optOut: 'NONE',
+
+// Customized userId MD5
+// userId: '8bad67e7e9ca25e3a0113c33bdc476df',
+// User attributes
+              userAttributes: {
+                customerId: [customerId],
+                firstName: [customer],
+                lastName: [customerLastName]
+
+// ...
+              }
+            })
             console.log("Data is not present");
             EmailData.push(customerEmail);
             window.localStorage.setItem('endpointUpdate', JSON.stringify(EmailData));
@@ -69,7 +100,34 @@
 
 
         } else {
-          alert("EndpointUpdated");
+          Analytics.updateEndpoint({
+            address: customerEmail, // The unique identifier for the recipient. For example, an address could be a device token, email address, or mobile phone number.
+            attributes: {
+
+// Custom attributes that your app reports to Amazon Pinpoint. You can use these attributes as selection criteria when you create a segment.
+// MUST be an array, even single value
+            },
+            channelType: 'EMAIL',
+
+// The channel type. Valid values: APNS, GCM
+
+/** Indicates whether a user has opted out of receiving messages with one of the following values:
+               * ALL - User has opted out of all messages.
+               * NONE - Users has not opted out and receives all messages.
+               */
+            optOut: 'NONE',
+
+// Customized userId MD5
+// userId: '8bad67e7e9ca25e3a0113c33bdc476df',
+// User attributes
+            userAttributes: {
+              customerId: [customerId],
+              firstName: [customer],
+              lastName: [customerLastName]
+
+// ...
+            }
+          })
           const endpointUpdate = []
           endpointUpdate.push(customerEmail);
           window.localStorage.setItem('endpointUpdate', JSON.stringify(endpointUpdate));
@@ -120,10 +178,10 @@
   {{ content_for_header }}
 
   {%- liquid
-                                                                                                                                                                               assign body_font_bold = settings.type_body_font | font_modify: 'weight', 'bold'
-                                                                                                                                                                               assign body_font_italic = settings.type_body_font | font_modify: 'style', 'italic'
-                                                                                                                                                                               assign body_font_bold_italic = body_font_bold | font_modify: 'style', 'italic'
-                                                                                                                                                                             %}
+                                                                                                                                                                                assign body_font_bold = settings.type_body_font | font_modify: 'weight', 'bold'
+                                                                                                                                                                                assign body_font_italic = settings.type_body_font | font_modify: 'style', 'italic'
+                                                                                                                                                                                assign body_font_bold_italic = body_font_bold | font_modify: 'style', 'italic'
+                                                                                                                                                                              %}
 
   {% style %}
     {{ settings.type_body_font | font_face: font_display: 'swap' }}
@@ -444,7 +502,7 @@
     }
     function addToCart() {
       let qty = Number(document.querySelector('.quantity__input').value);
-      dataLayer.push({
+      Analytics.record({
         name: 'added_to_cart',
         attributes: {
           product: productName,
