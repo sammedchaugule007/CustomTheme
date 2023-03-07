@@ -52,11 +52,26 @@
         dataLayer.push({'loginStatus': 'true'});
         localStorage.setItem('loggedIn', 'Yes');
 
-        if (localStorage.getItem('endpointUpdate')) {} else {
-          alert("Logged IN For the very fist time");
-          const endpointUpdate = {
-            email: customerEmail
+        let newObject = window.localStorage.getItem("endpointUpdate");
+        let EmailData = JSON.parse(newObject);
+        if (localStorage.getItem('endpointUpdate')) {
+
+          newObject = window.localStorage.getItem("endpointUpdate");
+          EmailData = JSON.parse(newObject);
+
+          if (EmailData.includes(customerEmail)) {
+            console.log("Data present already");
+          } else {
+            console.log("Data is not present");
           }
+
+
+        } else {
+          alert("EndpointUpdated");
+          newObject = window.localStorage.getItem("endpointUpdate");
+          EmailData = JSON.parse(newObject);
+          const endpointUpdate = EmailData ?? []
+          endpointUpdate.push(customerEmail);
           window.localStorage.setItem('endpointUpdate', JSON.stringify(endpointUpdate));
         }
       }
@@ -105,10 +120,10 @@
   {{ content_for_header }}
 
   {%- liquid
-                                                                                                                                                                            assign body_font_bold = settings.type_body_font | font_modify: 'weight', 'bold'
-                                                                                                                                                                            assign body_font_italic = settings.type_body_font | font_modify: 'style', 'italic'
-                                                                                                                                                                            assign body_font_bold_italic = body_font_bold | font_modify: 'style', 'italic'
-                                                                                                                                                                          %}
+                                                                                                                                                                             assign body_font_bold = settings.type_body_font | font_modify: 'weight', 'bold'
+                                                                                                                                                                             assign body_font_italic = settings.type_body_font | font_modify: 'style', 'italic'
+                                                                                                                                                                             assign body_font_bold_italic = body_font_bold | font_modify: 'style', 'italic'
+                                                                                                                                                                           %}
 
   {% style %}
     {{ settings.type_body_font | font_face: font_display: 'swap' }}
