@@ -3,7 +3,7 @@
     "3698a4eb-bf69-4a3a-bfb4-9a14b1b8338c": {
       "type": "announcement-bar-custom",
       "custom_css": [
-        "#announce {display: flex; justify-content:center; margin: auto;}"
+        "#announceImg {display: flex; justify-content: center; margin: auto;}"
       ],
       "settings": {
         "text": "",
