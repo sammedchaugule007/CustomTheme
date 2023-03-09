@@ -67,18 +67,18 @@ function startAutoScroll() {
   setTimeout(startAutoScroll, 1000);
 }
 
-container.addEventListener('scroll', function() {
-  // const scrollPosition = container.scrollTop;
-  let closestSection = 0;
-  let closestDistance = Number.MAX_SAFE_INTEGER;
-  sections.forEach(function(section, index) {
-    const distance = Math.abs(scrollPosition - section.offsetTop);
-    if (distance < closestDistance) {
-      closestSection = index;
-      closestDistance = distance;
-    }
-  });
-  currentSection = closestSection;
-});
+// container.addEventListener('scroll', function() {
+ 
+//   let closestSection = 0;
+//   let closestDistance = Number.MAX_SAFE_INTEGER;
+//   sections.forEach(function(section, index) {
+//     const distance = Math.abs(scrollPosition - section.offsetTop);
+//     if (distance < closestDistance) {
+//       closestSection = index;
+//       closestDistance = distance;
+//     }
+//   });
+//   currentSection = closestSection;
+// });
 
 startAutoScroll();
