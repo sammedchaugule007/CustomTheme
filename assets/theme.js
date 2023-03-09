@@ -51,14 +51,36 @@ observer.observe(targetNode, observerOptions);
 
 
 const container = document.querySelector('.has-scrollbar');
-const sections = document.querySelectorAll('.slider-item');
+const contents = document.querySelectorAll('.slider-item');
+// let scrollPos = 0;
+// const interval = setInterval(() => {
+//     scrollPos += container.offsetWidth; // scroll one child element width at a time
+//     container.scrollTo({ left: scrollPos, behavior: "smooth" });
+
+//     // if the end is reached, reset the scroll position to the start
+//     if (scrollPos >= container.scrollWidth - container.offsetWidth) {
+//       scrollPos = 0;
+//     }
+//   }, 1000); // scroll after every 3 seconds
+
+
+let index = 0;
 let scrollPos = 0;
 const interval = setInterval(() => {
-    scrollPos += container.offsetWidth; // scroll one child element width at a time
-    container.scrollTo({ left: scrollPos, behavior: "smooth" });
+  // scroll one content item width at a time
+  scrollPos += container.offsetWidth;
+  container.scrollTo({ left: scrollPos, behavior: "smooth" });
 
-    // if the end is reached, reset the scroll position to the start
-    if (scrollPos >= container.scrollWidth - container.offsetWidth) {
-      scrollPos = 0;
+  // if the end is reached, append the first content item to the end of the container
+  if (scrollPos >= container.scrollWidth - container.offsetWidth) {
+    container.scrollTo({ left: 0, behavior: "auto" }); // scroll to the first item without animation
+    container.appendChild(contents[index]); // append the first item to the end
+    scrollPos = 0;
+    index++;
+
+    // reset the index to 0 if it goes beyond the number of items
+    if (index >= contents.length) {
+      index = 0;
     }
-  }, 1000); // scroll after every 3 seconds
+  }
+}, 3000);
