@@ -47,6 +47,7 @@ observer.observe(targetNode, observerOptions);
 
 console.log("Added to main page");
 
+/*
 const container = document.querySelector('.container');
 const sections = document.querySelectorAll('.section');
 let currentSection = 0;
@@ -79,3 +80,4 @@ container.addEventListener('scroll', function() {
 });
 
 startAutoScroll();
+*/
