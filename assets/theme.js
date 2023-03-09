@@ -61,7 +61,7 @@ const interval = setInterval(() => {
     if (scrollPos >= container.scrollWidth - container.offsetWidth) {
       scrollPos = 0;
     }
-  }, 3000); // scroll after every 3 seconds
+  }, 1000); // scroll after every 3 seconds
 
 
 // container.addEventListener('scroll', function() {
