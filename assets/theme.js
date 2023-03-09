@@ -68,7 +68,7 @@ function startAutoScroll() {
 }
 
 container.addEventListener('scroll', function() {
-  const scrollPosition = container.scrollTop;
+  // const scrollPosition = container.scrollTop;
   let closestSection = 0;
   let closestDistance = Number.MAX_SAFE_INTEGER;
   sections.forEach(function(section, index) {
