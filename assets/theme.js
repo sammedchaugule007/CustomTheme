@@ -52,20 +52,17 @@ observer.observe(targetNode, observerOptions);
 
 const container = document.querySelector('.has-scrollbar');
 const sections = document.querySelectorAll('.slider-item');
-let currentSection = 0;
+let scrollPos = 0;
+const interval = setInterval(() => {
+    scrollPos += container.offsetWidth; // scroll one child element width at a time
+    container.scrollTo({ left: scrollPos, behavior: "smooth" });
 
-function scrollToSection(sectionIndex) {
-  sections[sectionIndex].scrollIntoView({
-    behavior: 'smooth'
-  });
-  currentSection = sectionIndex;
-}
+    // if the end is reached, reset the scroll position to the start
+    if (scrollPos >= container.scrollWidth - container.offsetWidth) {
+      scrollPos = 0;
+    }
+  }, 3000); // scroll after every 3 seconds
 
-function startAutoScroll() {
-  scrollToSection(currentSection);
-  currentSection = (currentSection + 1) % sections.length;
-  setTimeout(startAutoScroll, 1000);
-}
 
 // container.addEventListener('scroll', function() {
  
