@@ -50,7 +50,7 @@ observer.observe(targetNode, observerOptions);
 
 
 
-const container = document.querySelector('.slider-container has-scrollbar');
+const container = document.querySelector('.has-scrollbar');
 const sections = document.querySelectorAll('.slider-item');
 let currentSection = 0;
 
