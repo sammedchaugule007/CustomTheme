@@ -46,3 +46,36 @@ observer.observe(targetNode, observerOptions);
 */
 
 console.log("Added to main page");
+
+const container = document.querySelector('.container');
+const sections = document.querySelectorAll('.section');
+let currentSection = 0;
+
+function scrollToSection(sectionIndex) {
+  sections[sectionIndex].scrollIntoView({
+    behavior: 'smooth'
+  });
+  currentSection = sectionIndex;
+}
+
+function startAutoScroll() {
+  scrollToSection(currentSection);
+  currentSection = (currentSection + 1) % sections.length;
+  setTimeout(startAutoScroll, 5000);
+}
+
+container.addEventListener('scroll', function() {
+  const scrollPosition = container.scrollTop;
+  let closestSection = 0;
+  let closestDistance = Number.MAX_SAFE_INTEGER;
+  sections.forEach(function(section, index) {
+    const distance = Math.abs(scrollPosition - section.offsetTop);
+    if (distance < closestDistance) {
+      closestSection = index;
+      closestDistance = distance;
+    }
+  });
+  currentSection = closestSection;
+});
+
+startAutoScroll();
