@@ -62,20 +62,3 @@ const interval = setInterval(() => {
       scrollPos = 0;
     }
   }, 1000); // scroll after every 3 seconds
-
-
-// container.addEventListener('scroll', function() {
- 
-//   let closestSection = 0;
-//   let closestDistance = Number.MAX_SAFE_INTEGER;
-//   sections.forEach(function(section, index) {
-//     const distance = Math.abs(scrollPosition - section.offsetTop);
-//     if (distance < closestDistance) {
-//       closestSection = index;
-//       closestDistance = distance;
-//     }
-//   });
-//   currentSection = closestSection;
-// });
-
-startAutoScroll();
