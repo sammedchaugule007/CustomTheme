@@ -45,7 +45,7 @@ const observer = new MutationObserver(callback);
 observer.observe(targetNode, observerOptions);
 */
 
-console.log("Added to main page");
+alert("Added to main page");
 
 /*
 const container = document.querySelector('.container');
