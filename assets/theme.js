@@ -73,7 +73,7 @@ const interval = setInterval(() => {
 
   // if the end is reached, append the first content item to the end of the container
   if (scrollPos >= container.scrollWidth - container.offsetWidth) {
-    container.scrollTo({ left: 0, behavior: "auto" }); // scroll to the first item without animation
+    container.scrollTo({ left: 0, behavior: "smooth" }); // scroll to the first item without animation
     
     scrollPos = 0;
 
