@@ -45,11 +45,13 @@ const observer = new MutationObserver(callback);
 observer.observe(targetNode, observerOptions);
 */
 
-alert("Added to main page");
+//alert("Added to main page");
 
-/*
-const container = document.querySelector('.container');
-const sections = document.querySelectorAll('.section');
+
+
+
+const container = document.querySelector('.slider-container has-scrollbar');
+const sections = document.querySelectorAll('.slider-item');
 let currentSection = 0;
 
 function scrollToSection(sectionIndex) {
@@ -80,4 +82,3 @@ container.addEventListener('scroll', function() {
 });
 
 startAutoScroll();
-*/
