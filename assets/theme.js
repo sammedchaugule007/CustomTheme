@@ -63,7 +63,7 @@ function scrollToSection(sectionIndex) {
 
 function startAutoScroll() {
   scrollToSection(currentSection);
-  currentSection = (currentSection + 1) % 3;
+  currentSection = (currentSection + 1) % sections.length;
   setTimeout(startAutoScroll, 1000);
 }
 
