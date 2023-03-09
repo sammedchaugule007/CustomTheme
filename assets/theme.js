@@ -64,7 +64,7 @@ function scrollToSection(sectionIndex) {
 function startAutoScroll() {
   scrollToSection(currentSection);
   currentSection = (currentSection + 1) % sections.length;
-  setTimeout(startAutoScroll, 2000);
+  setTimeout(startAutoScroll, 1000);
 }
 
 container.addEventListener('scroll', function() {
