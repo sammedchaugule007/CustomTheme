@@ -3,7 +3,7 @@
     "3698a4eb-bf69-4a3a-bfb4-9a14b1b8338c": {
       "type": "announcement-bar-custom",
       "custom_css": [
-        "#announce {display: flex; }"
+        "#announce {display: flex;}"
       ],
       "settings": {
         "text": "",
@@ -22,7 +22,7 @@
     "1ee27948-8727-4812-b1df-fb75e9eb2ff4": {
       "type": "custom-banner",
       "settings": {
-        "banner-image1": "shopify:\/\/shop_images\/banner-1.jpg",
+        "banner-image1": "shopify:\/\/shop_images\/MicrosoftTeams-image_10.jpg",
         "itemName1": "women's latest fashion sale",
         "customBanner1": 200,
         "banner-image2": "shopify:\/\/shop_images\/banner-2.jpg",
