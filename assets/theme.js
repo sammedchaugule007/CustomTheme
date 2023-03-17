@@ -78,4 +78,4 @@ const interval = setInterval(() => {
 
     // reset the index to 0 if it goes beyond the number of items
   }
-}, 3000);
+}, 10000);
