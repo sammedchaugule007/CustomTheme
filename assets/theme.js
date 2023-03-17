@@ -47,7 +47,6 @@ observer.observe(targetNode, observerOptions);
 
 //alert("Added to main page");
 
-//no
 
 
 const container = document.querySelector('.has-scrollbar');
