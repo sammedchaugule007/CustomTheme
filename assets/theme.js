@@ -66,6 +66,8 @@ const contents = document.querySelectorAll('.slider-item');
 
 let index = 0;
 let scrollPos = 0;
+if(container)
+{
 const interval = setInterval(() => {
   // scroll one content item width at a time
   scrollPos += container.offsetWidth;
@@ -80,3 +82,4 @@ const interval = setInterval(() => {
     // reset the index to 0 if it goes beyond the number of items
   }
 }, 3000);
+}
