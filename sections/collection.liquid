@@ -42,7 +42,7 @@
                         <div class="card__media">
                              <div class="media--transparent media--hover-effect">
                             <a href="/products/{{item.title |  replace: ' ', '-'}}">
-                                <img src={{item.images | first | img_url:'' }}>
+                                <img src={{item.images | first | img_url:'100x' }}>
                             </a>
                             </div> 
                             {% comment %} <div class="media media--transparent media--hover-effect">
