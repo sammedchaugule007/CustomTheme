@@ -1,10 +1,83 @@
 {
   "sections": {
+    "65c308a5-1630-4372-97b4-98743558713a": {
+      "type": "featured-product",
+      "blocks": {
+        "template--17151133876521__65c308a5-1630-4372-97b4-98743558713a-167931801485d768ae-0": {
+          "type": "text",
+          "settings": {
+            "text": "{{ section.settings.product.vendor }}",
+            "text_style": "uppercase"
+          }
+        },
+        "template--17151133876521__65c308a5-1630-4372-97b4-98743558713a-167931801485d768ae-1": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h1"
+          }
+        },
+        "template--17151133876521__65c308a5-1630-4372-97b4-98743558713a-167931801485d768ae-2": {
+          "type": "price",
+          "settings": {
+          }
+        },
+        "template--17151133876521__65c308a5-1630-4372-97b4-98743558713a-167931801485d768ae-3": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button"
+          }
+        },
+        "template--17151133876521__65c308a5-1630-4372-97b4-98743558713a-167931801485d768ae-4": {
+          "type": "quantity_selector",
+          "settings": {
+          }
+        },
+        "template--17151133876521__65c308a5-1630-4372-97b4-98743558713a-167931801485d768ae-5": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true
+          }
+        },
+        "template--17151133876521__65c308a5-1630-4372-97b4-98743558713a-167931801485d768ae-6": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "template--17151133876521__65c308a5-1630-4372-97b4-98743558713a-167931801485d768ae-0",
+        "template--17151133876521__65c308a5-1630-4372-97b4-98743558713a-167931801485d768ae-1",
+        "template--17151133876521__65c308a5-1630-4372-97b4-98743558713a-167931801485d768ae-2",
+        "template--17151133876521__65c308a5-1630-4372-97b4-98743558713a-167931801485d768ae-3",
+        "template--17151133876521__65c308a5-1630-4372-97b4-98743558713a-167931801485d768ae-4",
+        "template--17151133876521__65c308a5-1630-4372-97b4-98743558713a-167931801485d768ae-5",
+        "template--17151133876521__65c308a5-1630-4372-97b4-98743558713a-167931801485d768ae-6"
+      ],
+      "settings": {
+        "product": "tommy-hilfiger-mens-leather-belt",
+        "color_scheme": "background-1",
+        "secondary_background": false,
+        "media_size": "medium",
+        "constrain_to_viewport": false,
+        "media_fit": "contain",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "main": {
-      "type": "main-404"
+      "type": "main-404",
+      "disabled": true,
+      "settings": {
+      }
     }
   },
   "order": [
+    "65c308a5-1630-4372-97b4-98743558713a",
     "main"
   ]
 }
