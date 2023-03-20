@@ -45,11 +45,11 @@
                                 <img src={{item.images | first | img_url:'' }}>
                             </a>
                             </div> {%- endcomment -%}
-                            <div class="media media--transparent media--hover-effect">
+                            {% comment %} <div class="media media--transparent media--hover-effect">
                                 <a href="/products/{{item.title |  replace: ' ', '-'}}">
-                                    <img src={{item.images | first | img_url:'300px' }}>
+                                    <img src={{item.images | first | img_url:'300x' }}>
                                 </a>     
-                            </div> 
+                            </div>  {% endcomment %}
                             
                         </div>
                           
