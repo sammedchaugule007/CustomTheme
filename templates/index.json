@@ -35,11 +35,43 @@
         "text-color": "#000000"
       }
     },
-    "2c6b638f-27d0-435d-88f1-4cb2d77ee872": {
+    "bf936101-d2e0-4680-a860-81d42d2ba96d": {
+      "type": "collection",
+      "settings": {
+        "collection-name": "WINTER COLLECTION",
+        "products": [
+          "denim-jacket",
+          "shirt",
+          "trench-coat",
+          "sweatshirt"
+        ]
+      }
+    },
+    "59cc002c-b874-4bc4-ab12-774028d8a435": {
+      "type": "collection",
+      "settings": {
+        "collection-name": "ACCESSORIES",
+        "products": [
+          "cowboy-hat",
+          "louis-philippe-brown-formal-shoes",
+          "tommy-hilfiger-willamette-formal-mens-leather-belt",
+          "monarcho-hightop-stud-sneakers-in-brown"
+        ]
+      }
+    },
+    "9f31bc4a-94b9-4c33-a6c6-3976f64297d2": {
+      "type": "custom-blog",
+      "disabled": true,
+      "settings": {
+        "blog-range": 6,
+        "custom-blog": "news"
+      }
+    },
+    "b1baede3-ddb1-4927-abfd-88498a7fb818": {
       "type": "featured-collection",
       "disabled": true,
       "settings": {
-        "title": "WINTER COLLECTION",
+        "title": "Featured collection",
         "heading_size": "h1",
         "description": "",
         "show_description": false,
@@ -62,66 +94,15 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
-    },
-    "91ae8129-f941-4ccb-9ff3-c139a1217bca": {
-      "type": "collection",
-      "settings": {
-        "collection-name": "WINTER COLLECTION",
-        "products": [
-          "denim-jacket",
-          "shirt",
-          "trench-coat",
-          "sweatshirt"
-        ]
-      }
-    },
-    "0edb2edf-75c7-4170-b328-e838a53d1b26": {
-      "type": "collection",
-      "settings": {
-        "collection-name": "ACCESSORIES",
-        "products": [
-          "cowboy-hat",
-          "louis-philippe-brown-formal-shoes",
-          "tommy-hilfiger-willamette-formal-mens-leather-belt",
-          "monarcho-hightop-stud-sneakers-in-brown"
-        ]
-      }
-    },
-    "9f31bc4a-94b9-4c33-a6c6-3976f64297d2": {
-      "type": "custom-blog",
-      "disabled": true,
-      "settings": {
-        "blog-range": 6,
-        "custom-blog": "news"
-      }
-    },
-    "d8307ae6-4477-4383-b020-120171a4bb6f": {
-      "type": "featured-blog",
-      "disabled": true,
-      "settings": {
-        "heading": "Blog post",
-        "heading_size": "h1",
-        "blog": "news",
-        "post_limit": 3,
-        "columns_desktop": 3,
-        "color_scheme": "background-1",
-        "show_image": true,
-        "show_date": true,
-        "show_author": false,
-        "show_view_all": true,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
     }
   },
   "order": [
     "3698a4eb-bf69-4a3a-bfb4-9a14b1b8338c",
     "428b2870-0096-4767-8a3f-5beec947e9e5",
     "1ee27948-8727-4812-b1df-fb75e9eb2ff4",
-    "2c6b638f-27d0-435d-88f1-4cb2d77ee872",
-    "91ae8129-f941-4ccb-9ff3-c139a1217bca",
-    "0edb2edf-75c7-4170-b328-e838a53d1b26",
+    "bf936101-d2e0-4680-a860-81d42d2ba96d",
+    "59cc002c-b874-4bc4-ab12-774028d8a435",
     "9f31bc4a-94b9-4c33-a6c6-3976f64297d2",
-    "d8307ae6-4477-4383-b020-120171a4bb6f"
+    "b1baede3-ddb1-4927-abfd-88498a7fb818"
   ]
 }
