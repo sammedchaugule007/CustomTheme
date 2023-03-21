@@ -43,7 +43,7 @@
           "denim-jacket",
           "shirt",
           "trench-coat",
-          "trench-coat-1"
+          "sweatshirt"
         ]
       }
     },
@@ -61,6 +61,7 @@
     },
     "a816e039-d26c-4e1a-ad1d-423c3c2b36b3": {
       "type": "featured-collection",
+      "disabled": true,
       "settings": {
         "title": "Featured collection",
         "heading_size": "h1",
